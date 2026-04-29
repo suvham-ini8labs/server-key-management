@@ -1,0 +1,2 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHuxUYOTbflUuHYoqwu9rhtWzK+zGO4tqdvqaHWybslo core@verna
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP7Iq0EmJtXrD8yVdJF1Qw2wFhY3OqSlCabJXsP/ae8L azureuser@suvham-jumpserver
