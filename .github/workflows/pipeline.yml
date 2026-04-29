@@ -9,15 +9,10 @@ on:
 
 jobs:
   terraform:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: 1.6.0
 
       - name: Terraform Init
         run: terraform init
@@ -27,9 +22,3 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-
-      - name: Verify SSH Access
-        run: |
-          for ip in <master-private-ip> <worker-private-ip>; do
-            ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@$ip "echo SSH OK on $ip"
-          done
